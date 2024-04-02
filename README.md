@@ -9,4 +9,4 @@ A streamlined Node.js template designed for seamless versioning and automated NP
 - **GitHub Actions for CI/CD**: Automate building, testing, and publishing steps.
 - **Change Log Generation**: Automatically keep track of changes and updates.
 
-test-stable
+test-breaking-change
