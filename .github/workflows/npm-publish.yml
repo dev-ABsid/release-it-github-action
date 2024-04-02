@@ -45,7 +45,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      # Fetch the latest commits and tags
       - name: Fetch latest changes
         run: |
           git fetch --prune
@@ -60,11 +59,14 @@ jobs:
         run: npm run build
       - name: Release
         run: |
-          commit_message="${{ needs.versioning.outputs.commit_message }}"
-          if [[ "$commit_message" == *"[alpha]"* ]]; then
-            cd dist && npm publish --tag alpha --access public --non-interactive
+          echo "Commit message: $commit_message"
+          if echo "$commit_message" | grep -q "-alpha"; then
+            echo "Publishing alpha release..."
+            cd dist/bundle && npm publish --tag alpha --access public --non-interactive
           else
-            cd dist && npm publish --access public --non-interactive
+            echo "Publishing regular release..."
+            cd dist/bundle && npm publish --access public --non-interactive
           fi
+        env:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
