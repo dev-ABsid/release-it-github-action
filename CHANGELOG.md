@@ -1,5 +1,13 @@
 
 
+# [4.1.0](https://github.com/dev-ABsid/release-it-github-action/compare/v4.0.0...v4.1.0) (2024-04-02)
+
+
+### Features
+
+* add ([c67f174](https://github.com/dev-ABsid/release-it-github-action/commit/c67f1747558bd10be2df86d3b89062b13e96978e))
+* add ([973eaaa](https://github.com/dev-ABsid/release-it-github-action/commit/973eaaa651bf364ac0f187ad4b38c140e28bdc1e))
+
 # [4.0.0](https://github.com/dev-ABsid/release-it-github-action/compare/3.0.2...v4.0.0) (2024-04-02)
 
 
