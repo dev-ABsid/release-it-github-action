@@ -8,8 +8,6 @@ on:
 jobs:
   versioning:
     runs-on: ubuntu-latest
-    outputs:
-      commit_message: ${{ steps.capture_commit_message.outputs.commit_message }} # Define output variable
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,13 +22,10 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Show Git Status
         run: git status
-      - name: Capture Commit Message # Capture the commit message
-        id: capture_commit_message
-        run: echo "::set-output name=commit_message::$(git log -1 --pretty=%B)"
       - name: Release with release-it
         run: |
-          commit_message="${{ steps.capture_commit_message.outputs.commit_message }}"
-          if [[ "$commit_message" == *"[alpha]"* ]]; then
+          commit_message=$(git log -1 --pretty=%B)
+          if [[ "$commit_message" == *"alpha"* ]]; then
             npx release-it minor --preRelease=alpha --ci
           else
             npx release-it --ci
@@ -59,14 +54,11 @@ jobs:
         run: npm run build
       - name: Release
         run: |
-          echo "Commit message: $commit_message"
-          if echo "$commit_message" | grep -q "-alpha"; then
-            echo "Publishing alpha release..."
-            cd dist/bundle && npm publish --tag alpha --access public --non-interactive
+          commit_message=$(git log -1 --pretty=%B)
+          if [[ "$commit_message" == *"alpha"* ]]; then
+            cd dist && npm publish --tag alpha --access public --non-interactive
           else
-            echo "Publishing regular release..."
-            cd dist/bundle && npm publish --access public --non-interactive
+            cd dist && npm publish --access public --non-interactive
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          commit_message: ${{ needs.versioning.outputs.commit_message }}
