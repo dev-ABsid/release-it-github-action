@@ -1,5 +1,13 @@
 
 
+# [4.3.0-alpha.1](https://github.com/dev-ABsid/release-it-github-action/compare/v4.3.0-alpha.0...v4.3.0-alpha.1) (2024-04-02)
+
+
+### Bug Fixes
+
+* [alpha] release ([0a3c0ba](https://github.com/dev-ABsid/release-it-github-action/commit/0a3c0ba0d9fd58c548e52f815a4b341d936ef610))
+* [alpha] release ([9681c60](https://github.com/dev-ABsid/release-it-github-action/commit/9681c60da29c5feeefed11c9e73c301af03ac5a1))
+
 # [4.3.0-alpha.0](https://github.com/dev-ABsid/release-it-github-action/compare/v4.2.0...v4.3.0-alpha.0) (2024-04-02)
 
 
