@@ -49,7 +49,7 @@ jobs:
       - name: Fetch latest changes
         run: |
           git fetch --prune
-          git checkout main
+          git checkout master
           git pull
       - uses: actions/setup-node@v3
         with:
