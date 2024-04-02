@@ -28,7 +28,7 @@ jobs:
         run: |
           commit_message="${{ github.event.head_commit.message }}"
           if [[ "$commit_message" == *"[alpha]"* ]]; then
-            npx release-it major --preRelease=alpha --ci
+            npx release-it minor --preRelease=alpha --ci
           elif [[ "$commit_message" == *"[major-alpha]"* ]]; then
             npx release-it major --preRelease=alpha --ci
           else
