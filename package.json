@@ -17,6 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@himalaya-ui/core": "^2.0.0-alpha.3",
     "@release-it/conventional-changelog": "^8.0.1",
     "simple-greet": "1.0.1"
   },
