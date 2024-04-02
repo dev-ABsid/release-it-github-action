@@ -69,3 +69,4 @@ jobs:
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          commit_message: ${{ needs.versioning.outputs.commit_message }}
