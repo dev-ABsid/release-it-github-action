@@ -1,5 +1,12 @@
 
 
+# [4.3.0-alpha.0](https://github.com/dev-ABsid/release-it-github-action/compare/v4.2.0...v4.3.0-alpha.0) (2024-04-02)
+
+
+### Features
+
+* [alpha] add ([61bd155](https://github.com/dev-ABsid/release-it-github-action/commit/61bd1552f714551718c1ad4dcc4820dd4a384625))
+
 # [4.2.0](https://github.com/dev-ABsid/release-it-github-action/compare/v4.1.0...v4.2.0) (2024-04-02)
 
 
