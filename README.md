@@ -1,4 +1,4 @@
-# release-it-github-action
+# release-it-with-github-action
 
 A streamlined Node.js template designed for seamless versioning and automated NPM deployments, leveraging `release-it` and GitHub Actions for an efficient development workflow.
 
