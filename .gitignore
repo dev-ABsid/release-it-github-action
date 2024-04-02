@@ -1,0 +1,52 @@
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional: .env file to store environment variables
+.env
+
+# Optional: MacOS folder attributes
+.DS_Store
+
+# Optional: Windows image file caches
+Thumbs.db
+
+# Optional: Windows Folder config file
+Desktop.ini
+
+# Optional: npm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Editor directories and files
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+*.swp
+*.swo
+*.sln
+*.svc
+*.ncrunch*
+*.nCrunch*
+*.crunch*
+*.crunchCache*
+*.opendb
+*.VC.db
+.vs/
+*.user
+*.userprefs
+*.usersettings
+*.dotCover
+
+# Build artifacts
+/dist
+/build
+/.pnp
+.pnp.js

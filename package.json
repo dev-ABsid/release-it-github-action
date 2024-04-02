@@ -1,0 +1,27 @@
+{
+  "name": "release-it-with-github-action",
+  "version": "1.0.0",
+  "description": "A streamlined Node.js template designed for seamless versioning and automated NPM deployments, leveraging release-it and GitHub Actions for an efficient development workflow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdirp dist && cpy index.js package.json dist/"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "greeting",
+    "simple",
+    "example"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
+    "simple-greet": "1.0.1"
+  },
+  "devDependencies": {
+    "cpy-cli": "^5.0.0",
+    "mkdirp": "^3.0.1"
+  }
+}
