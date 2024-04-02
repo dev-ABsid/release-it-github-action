@@ -48,7 +48,7 @@ jobs:
       # Fetch the latest commits and tags
       - name: Fetch latest changes
         run: |
-          git fetch --prune --unshallow
+          git fetch --prune
           git checkout main
           git pull
       - uses: actions/setup-node@v3
