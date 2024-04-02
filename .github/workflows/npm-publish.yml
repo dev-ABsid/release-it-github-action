@@ -68,5 +68,4 @@ jobs:
             cd dist/bundle && npm publish --access public --non-interactive
           fi
         env:
-        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
